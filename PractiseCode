@@ -1,0 +1,24 @@
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+
+driver = webdriver.Chrome('C:\ChromeDriver\chromedriver.exe')
+driver.get("https://fs19.formsite.com/AtRZaC/p0kjb7kggl/index.html")
+
+
+firstname = input('Enter your first name:-')
+lastname  = input('Enter your last naem:- ')
+college = input('Enter your college name:- ')
+RollNumber = input('Enter your Roll number:- ')
+
+
+fname = driver.find_element_by_xpath('//*[@id="RESULT_TextField-0"]')
+fname.send_keys(firstname)
+
+lname = driver.find_element_by_xpath('//*[@id="RESULT_TextField-1"]')
+lname.send_keys(lastname)
+
+col = driver.find_element_by_xpath('//*[@id="RESULT_TextField-2"]')
+col.send_keys(college)
+
+roll = driver.find_element_by_xpath('//*[@id="RESULT_TextField-3"]')
+roll.send_keys(RollNumber)
