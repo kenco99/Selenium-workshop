@@ -1,0 +1,11 @@
+from selenium import webdriver
+driver=webdriver.Chrome('C:\chromedriver.exe')
+from selenium.webdriver.common.keys import Keys
+driver.get("https://www.facebook.com/?stype=lo&jlou=Afe7BX8Fi3hJKc8lGa9ESMqGuKwL0VOsSBA05miZIOw3IM3wVYePBd0IdvDGVZt39DE9DKqd6kiGlMmIfjZYDP1nn44wIoymzXC5aTx5sD6vtA&smuh=44393&lh=Ac-t9PMUUFW-_T-n")
+input("press enter after page loads")
+a=driver.find_element_by_xpath("//*[@id='email']")
+a.send_keys("vinit.sarode12@gmail.com")
+b=driver.find_element_by_xpath("//*[@id='pass']")
+b.send_keys("ivaruag111")
+c=driver.find_element_by_xpath("//*[@id='u_0_b']")
+c.send_keys(Keys.ENTER)
