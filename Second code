@@ -1,0 +1,10 @@
+from selenium import webdriver
+driver=webdriver.Chrome('C:\chromedriver.exe')
+from selenium.webdriver.common.keys import Keys
+driver.get("https://www.google.co.in")
+input("Press Enter")
+a=driver.find_element_by_xpath("//*[@id='tsf']/div[2]/div[1]/div[1]/div/div[2]/input")
+msg=input("Enter google search")
+a.send_keys(msg)
+b=driver.find_element_by_xpath("//*[@id='tsf']/div[2]/div[1]/div[3]/center/input[1]")
+b.click()
